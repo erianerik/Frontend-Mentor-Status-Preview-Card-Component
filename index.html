@@ -13,22 +13,24 @@
 </head>
 
 <body>
-  <main>
-    <div>
-      <picture>
-        <source srcset="./images/image-header-desktop.jpg" media="(max-width: 550px)">
-        <img src="./images/image-header-mobile.jpg" alt="">
+  <main class="main">
+    <div class="main__status-preview">
+
+      <picture class="main__status-preview__picture">
+        <source srcset="./images/image-header-desktop.jpg" media="(max-width: 550px)"
+          class="status-preview__picture__image">
+        <img src="./images/image-header-mobile.jpg" alt="" class="status-preview__picture__image">
       </picture>
 
-      <div>
-        <h1>Get insights that help your business grow.</h1>
-        <p>Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and
-          overall efficiency.</p>
+      <div class="main__status-preview__content">
+        <h1 class="status-preview__content__title">Get insights that help your business grow.</h1>
+        <p class="status-preview__content__description">Discover the benefits of data analytics and make better
+          decisions regarding revenue, customer experience, and overall efficiency.</p>
 
-        <div>
-          <span> <strong>10k+</strong> companies </span>
-          <span> <strong>314</strong> templates </span>
-          <span> <strong>12m+</strong> queries </span>
+        <div class="status-preview__content__info">
+          <span class="content__info__label"> <strong class="info__label__value">10k+</strong> companies </span>
+          <span class="content__info__label"> <strong class="info__label__value">314</strong> templates </span>
+          <span class="content__info__label"> <strong class="info__label__value">12m+</strong> queries </span>
         </div>
 
       </div>
