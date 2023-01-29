@@ -19,7 +19,6 @@
 }
 
 .status-preview__picture__image {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -89,7 +88,7 @@
     }
 
     .main__status-preview__picture {
-        display: grid;
+        display: initial;
         border-radius: 0 .5rem .5rem 0;
         grid-area: picture;
     }
