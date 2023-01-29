@@ -1,0 +1,135 @@
+.main {
+    min-height: 100%;
+    padding: 1.5rem;
+    display: grid;
+    color: var(--white);
+    place-items: center;
+    background-color: var(--very-dark-blue);
+}
+
+.main__status-preview {
+    border-radius: .5rem;
+    background-color: var(--dark-desaturated-blue);
+}
+
+.status-preview__picture__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: .5rem .5rem 0 0;
+    position: relative;
+}
+
+.status-preview__picture__image::after {
+    content: '';
+    display: block;
+    position: absolute;
+    inset: 0;
+    background-color: var(--soft-violet-transparent);
+}
+
+.main__status-preview__content {
+    padding: 2rem 2.5rem;
+    display: grid;
+    gap: 2rem;
+}
+
+.status-preview__content__header {
+    display: grid;
+    gap: 2rem;
+}
+
+.status-preview__content__title {
+    width: 90%;
+    margin: 0 auto;
+    overflow-wrap: break-word;
+    font-size: 1.7rem;
+    text-align: center;
+}
+
+.content__title__emphasis {
+    color: var(--soft-violet);
+}
+
+.status-preview__content__description {
+    line-height: 1.8rem;
+    font-size: 1rem;
+    color: var(--slightly-transparent-white300);
+    text-align: center;
+}
+
+.status-preview__content__info {
+    display: grid;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.content__info__label {
+    display: grid;
+    gap: .5rem;
+    text-align: center;
+    font-size: 1rem;
+    font-family: var(--font-family-lexend);
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color: var(--slightly-transparent-white300);
+}
+
+.info__label__value {
+    font-size: 1.3rem;
+    color: var(--white);
+}
+
+@media screen and (min-width: 900px) {
+
+    .main__status-preview {
+        max-width: 80%;
+        min-height: 30.6rem;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 'status-content picture';
+    }
+
+    .main__status-preview__picture {
+        grid-area: picture;
+    }
+
+    .main__status-preview__content {
+        padding: 2rem 5rem;
+        grid-area: status-content;
+        place-items: center;
+        gap: 0;
+    }
+
+    .status-preview__content__title {
+        width: auto;
+        font-size: 2.5rem;
+    }
+
+    .status-preview__content__title,
+    .status-preview__content__description {
+        text-align: left;
+    }
+
+    .status-preview__content__description {
+        padding-right: 3rem;
+    }
+
+    .status-preview__content__info {
+        width: 100%;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        justify-content: flex-start;
+    }
+
+    .content__info__label {
+        text-align: left;
+        font-size: .9rem;
+    }
+
+    .info__label__value {
+        font-size: 1.5rem;
+        letter-spacing: normal;
+    }
+
+}
